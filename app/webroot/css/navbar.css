@@ -1,0 +1,49 @@
+/* first menu */
+.navbar ul{
+    background-image: url(../img/menuTop.png);
+    background-size: 100% 100%;
+    border-radius: 6px;
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+.navbar ul li{
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+.navbar ul li p{
+    display: block;
+    padding: 0 1em;
+    margin: 0;
+    font-weight: bold;
+}
+.navbar ul li p:hover{
+    background-image: url(../img/menuTop2.png);
+    background-size: 100% 100%;
+    color: #808080;
+    border-radius: 0;
+}
+.navbar ul li > p:hover{
+    border-radius: 6px;
+    color: #808080;
+}
+.navbar ul li p a:link,.navbar ul li p a:active, .navbar ul li p a:visited{
+    color: #808080;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+}
+/* child */
+.navbar ul li > ul{
+    display: none;
+}
+.navbar ul li > ul li{
+    
+}
+.navbar ul li > ul li a:link, .navbar ul li > ul li a:active, .navbar ul li > ul li a:visited{
+    color> #fff;    
+}
