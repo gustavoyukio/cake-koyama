@@ -41,7 +41,10 @@
     -moz-transition: @transition;
     -webkit-transition: @transition;
 }
-
+.spacing(@mar, @pad){
+    margin: @mar;
+    padding: @pad;
+}
 /* ==========================================================================
    HTML5 Boilerplate - $Normilitzr
 ========================================================================== */
@@ -439,4 +442,112 @@ footer {
     h3 {
         page-break-after: avoid;
     }
+}
+
+/*==================================================
+    Minhas Mudanças
+    $body
+    $all-around
+    $header
+    $navbar
+    $main
+        $section 1
+    $footer
+==================================================*/
+
+
+/*=======================
+    $Body
+=======================*/
+BODY{
+    background-color:#e8e8e8 !important;
+    border:0;
+    padding:0;
+    margin:0;
+    text-align:center;
+    font-size: 14px !important;
+    font-family:Georgia, "sans-serif";
+}
+
+/* ===========================================
+    $All-Around
+=============================================*/
+.clear{
+    clear:both;
+}
+
+img{
+    border:0;
+}
+a{
+    border:0;
+    text-decoration:none;
+}
+a:link, a:visited{
+    color:blue;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+/*=======================================================
+    $Header
+=========================================================*/
+#header{
+    background-color: #808080;
+    border: 1px solid red;
+    color: red;
+    z-index: 2;
+}
+
+
+/*======================================================
+    $Main-content
+=======================================================*/
+.main-content{
+    background-color: #fff;
+    border: 1px solid #aeaeae;
+    margin-top: 10px;
+    min-height: 600px;
+    padding: 1em;
+    z-index: 1;
+}
+.quick{
+    clear: both;
+    margin-top: 40px;
+}
+.quick div ul{
+    .spacing(0,0);
+}
+.quick div ul li{
+    -webkit-box-shadow: inset 0px 1px 0px 0px #fff;
+    box-shadow: inset 0px 1px 0px 0px #fff;
+    line-height: 18px;
+    background: #f9f9f9;
+    background: -moz-linear-gradient(top, #f9f9f9 0%, #ededed 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f9f9), color-stop(100%,#ededed));
+    background: -webkit-linear-gradient(top, #f9f9f9 0%,#ededed 100%);
+    background: -o-linear-gradient(top, #f9f9f9 0%,#ededed 100%);
+    background: -ms-linear-gradient(top, #f9f9f9 0%,#ededed 100%);
+    background: linear-gradient(top, #f9f9f9 0%,#ededed 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#ededed',GradientType=0 );
+    border: 1px solid #e2e2e2;
+    display: inline-block;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    padding: 0 10px;
+    height: 100%;
+}
+.quick div ul li a:link, .quick div ul li a:visited, .quick div ul li a:active{
+    text-align: center;
+    width: 120px;
+    font-size: 12px;
+    float: left;
+    padding: 9px 10px 7px 0px;
+
 }

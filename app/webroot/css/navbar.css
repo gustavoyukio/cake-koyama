@@ -3,10 +3,11 @@
     background-image: url(../img/menuTop.png);
     background-size: 100% 100%;
     border-radius: 6px;
-    height: 40px;
+    min-height: 40px;
     line-height: 40px;
     list-style: none;
     padding: 0;
+    position: relative;
     margin: 0;
     text-decoration: none;
 }
@@ -39,11 +40,34 @@
 }
 /* child */
 .navbar ul li > ul{
+    border-radius: 0;
     display: none;
+    position: absolute;
+
 }
 .navbar ul li > ul li{
-    
+    font-size: 10px;
+    padding: 1em 2em;
 }
 .navbar ul li > ul li a:link, .navbar ul li > ul li a:active, .navbar ul li > ul li a:visited{
-    color> #fff;    
+    color: #fff;    
+}
+
+.navbar ul li:hover > ul {
+    background-color: #f8f8f8;
+    background-image: none;
+    display: block;
+    height: 60px;
+}
+.navbar ul li:hover > ul li > ul{
+    margin-left: -2em;
+    position: absolute;
+}
+.navbar ul li:hover > ul li > ul li{
+    padding-left: 1em 2em;
+}
+.navbar ul li:hover > ul li > ul li a:link, .navbar ul li:hover > ul li > ul li a:active, .navbar ul li:hover > ul li > ul li a:visited{
+    color: #808080;
+    font-size: 14px;
+
 }
