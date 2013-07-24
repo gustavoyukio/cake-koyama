@@ -37,7 +37,7 @@ class AppController extends Controller {
 
 		// Faremos a verificar para o admin
 		if( $this->params['prefix'] == 'admin'){
-			
+			$this->layout = 'admin';
 		}
 
 	}

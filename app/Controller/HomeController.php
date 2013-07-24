@@ -50,9 +50,6 @@ class HomeController extends AppController {
  *
  */
 	public function admin_index(){
-		
-		// Layout
-		$this->layout = "admin";
 
 		// Title
 		$title_for_layout = "Admin - Home: Koyama Imóveis";

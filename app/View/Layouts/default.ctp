@@ -49,14 +49,13 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
+			<!-- Footer -->
 		</div>
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
+	<?php //echo $this->element('sql_dump'); ?>
+
+	<!-- Scripts -->
+	<script>navigator.userAgent.match("MSIE")&&document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')||document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+	<?php echo $this->Html->script(array('plugins','main','chart')); ?>
 </body>
 </html>

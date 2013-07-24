@@ -757,6 +757,7 @@ footer .wrapper {
     Minhas Mudanças
     $body
     $all-around
+        $forms
     $header
     $navbar
     $main
@@ -772,14 +773,23 @@ BODY {
   padding: 0;
   margin: 0;
   text-align: center;
+  font-color: #808080;
   font-size: 14px !important;
-  font-family: Georgia, "sans-serif";
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* ===========================================
     $All-Around
 =============================================*/
 .clear {
   clear: both;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 img {
   border: 0;
@@ -797,6 +807,92 @@ a:visited {
 }
 .right {
   float: right;
+}
+.heading {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  border-bottom: 1px solid #dcdcdc;
+  margin-bottom: 18px;
+  padding-bottom: 5px;
+  line-height: 27px;
+  font-size: 18px;
+  text-align: left;
+}
+/*===========================================================
+        Forms
+    ============================================================*/
+.formSep {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #dcdcdc;
+}
+label {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  cursor: pointer;
+}
+input[type='text'] {
+  font-size: 13px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  display: inline-block;
+  height: 20px;
+  padding: 1em;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555;
+  vertical-align: middle;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+input[type='text']:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+  outline: 0;
+  z-index: 2;
+  position: relative;
+}
+input[type='button'] {
+  font-size: 13px;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  display: inline-block;
+  padding: 0.4em 1em;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555;
+  vertical-align: middle;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.form-id {
+  width: 100px;
+}
+.form-str {
+  width: 500px;
 }
 /*=======================================================
     $Header
@@ -825,19 +921,13 @@ a:visited {
 .quick div ul {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 .quick div ul li {
+  background: #f1f1f1;
   -webkit-box-shadow: inset 0px 1px 0px 0px #fff;
   box-shadow: inset 0px 1px 0px 0px #fff;
   line-height: 18px;
-  background: #f9f9f9;
-  background: -moz-linear-gradient(top, #f9f9f9 0%, #ededed 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f9f9f9), color-stop(100%, #ededed));
-  background: -webkit-linear-gradient(top, #f9f9f9 0%, #ededed 100%);
-  background: -o-linear-gradient(top, #f9f9f9 0%, #ededed 100%);
-  background: -ms-linear-gradient(top, #f9f9f9 0%, #ededed 100%);
-  background: linear-gradient(top, #f9f9f9 0%, #ededed 100%);
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#ededed', GradientType=0);
   border: 1px solid #e2e2e2;
   display: inline-block;
   -webkit-border-radius: 4px;
@@ -846,6 +936,7 @@ a:visited {
   border-radius: 4px;
   padding: 0 10px;
   height: 100%;
+  width: 100%;
 }
 .quick div ul li a:link,
 .quick div ul li a:visited,
@@ -855,4 +946,61 @@ a:visited {
   font-size: 12px;
   float: left;
   padding: 9px 10px 7px 0px;
+  width: 100%;
+  background: #f9f9f9;
+  background: -moz-linear-gradient(top, #f9f9f9 0%, #ededed 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f9f9f9), color-stop(100%, #ededed));
+  background: -webkit-linear-gradient(top, #f9f9f9 0%, #ededed 100%);
+  background: -o-linear-gradient(top, #f9f9f9 0%, #ededed 100%);
+  background: -ms-linear-gradient(top, #f9f9f9 0%, #ededed 100%);
+  background: linear-gradient(top, #f9f9f9 0%, #ededed 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#ededed', GradientType=0);
+}
+.quick div ul li a:hover {
+  background: #f9f9f9;
+  background: -moz-linear-gradient(top, #ededed 0%, #f9f9f9 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ededed), color-stop(100%, #f9f9f9));
+  background: -webkit-linear-gradient(top, #ededed 0%, #f9f9f9 100%);
+  background: -o-linear-gradient(top, #ededed 0%, #f9f9f9 100%);
+  background: -ms-linear-gradient(top, #ededed 0%, #f9f9f9 100%);
+  background: linear-gradient(top, #ededed 0%, #f9f9f9 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ededed', endColorstr='#f9f9f9', GradientType=0);
+}
+.c2-links {
+  margin: 0 -10px;
+  width: 18%;
+}
+/*====================================================================
+    Main - Content
+        $listar Imoveis
+=====================================================================*/
+.detalhes .detalhes-image figure {
+  height: 100%;
+  max-height: 200px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.detalhes .detalhes-image img {
+  border: 1px solid #808080;
+  height: 100%;
+  min-height: 200px;
+  overflow: hidden;
+  width: 100%;
+}
+.detalhes .detalhes-image figure figcaption {
+  top: 200px;
+  background-color: #ededed;
+  padding: 1em;
+  position: absolute;
+  display: block;
+  width: 100%;
+}
+.detalhes .detalhes-image figure:hover figcaption {
+  top: 150px;
+  transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  position: absolute;
 }

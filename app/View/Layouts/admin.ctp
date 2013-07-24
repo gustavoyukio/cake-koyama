@@ -14,7 +14,7 @@
 
 		// Estilo
 		echo $this->Html->css(array(
-			'main','navbar', 'table'
+			'main','navbar', 'table', 'splashy'
 		));
 
 	?>
