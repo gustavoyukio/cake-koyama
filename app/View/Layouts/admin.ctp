@@ -14,7 +14,7 @@
 
 		// Estilo
 		echo $this->Html->css(array(
-			'main','navbar', 'table', 'splashy'
+			'admin/main','admin/navbar', 'admin/table', 'admin/splashy'
 		));
 
 	?>
@@ -83,9 +83,13 @@
 </div>
 
 <!-- Script -->
+<script>
+	navigator.userAgent.match("MSIE")&&document.write('<script src="/js/admin/libs/jquery/jquery-1.9.1.min.js"><\/script>')||document.write('<script src="/js/admin/libs/jquery/jquery-2.0.2.min.js"><\/script>');
+</script>
 <?php
-	echo $this->Html->script(array('jquery-2.0.2.min','plugins','main'));
+	echo $this->Html->script(array('admin/libs/canvas/jquery.peity.min','admin/plugins','admin/main'));
 ?>
+
 <?php echo $this->element('sql_dump'); ?>
 
 </body>

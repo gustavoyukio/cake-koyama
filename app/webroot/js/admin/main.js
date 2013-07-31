@@ -60,4 +60,31 @@ $(function(){
         height: '32'
     });
 
+    // fancybox imovel index
+    // Open
+    $(".botao").on('click', function(e){
+
+        $.fancybox.open('asdasdsad');
+
+        return false;
+    });
+
+    // Tabs
+    // Change tabs
+    $(".tabs li a").on('click', function(e){
+        // Nao deixamos o url funcionar
+        e.preventDefault();
+
+        // Pegamos o Href
+        var href = $(this).attr('href');
+
+        // Escondemos os Divs que queremos e removemos a classe active
+        $('.tabs li').removeClass('active');
+        $(this).closest('.c12').find('.tab').hide();
+
+        // Mostramos o Div que queremos
+        $(this).closest('.c12').find(href).show();
+        $(this).closest('li').addClass('active');
+    });
+
 });

@@ -8,39 +8,14 @@
     </form>
 </div>
 
-
 <div class="span12 tac">
-                            <ul class="ov_boxes">
-                                <li>
-                                    <div class="p_bar_up p_canvas"><span style="display: none;">2,4,9,7,12,8,16</span><canvas width="50" height="32"></canvas></div>
-                                    <div class="ov_text">
-                                        <strong>$3 458,00</strong>
-                                        Weekly Sale
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="p_bar_down p_canvas"><span style="display: none;">20,15,18,14,10,13,9,7</span><canvas width="50" height="32"></canvas></div>
-                                    <div class="ov_text">
-                                        <strong>$43 567,43</strong>
-                                        Monthly Sale
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="p_line_up p_canvas"><span style="display: none;">3,5,9,7,12,8,16</span><canvas width="50" height="32"></canvas></div>
-                                    <div class="ov_text">
-                                        <strong>2304</strong>
-                                        Unique visitors (last 24h)
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="p_line_down p_canvas"><span style="display: none;">20,16,14,18,15,14,14,13,12,10,10,8</span><canvas width="50" height="32"></canvas></div>
-                                    <div class="ov_text">
-                                        <strong>30240</strong>
-                                        Unique visitors (last week)
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+    <ul class="ov_boxes">
+        <li>
+            <div class="canvas"><span style="display: none;">2,4,9,7,12,8,16</span><canvas></canvas></div>
+            <div class="canvas"><span style="display: none;">1,4,-20,7,90</span><canvas></canvas></div>
+        </li>
+    </ul>
+</div>
 
 <div class='quick row fix'>
     <div class='c2 c2-links'>
@@ -53,21 +28,18 @@
     <div class='c2 c2-links'>
         <ul>
             <li>
-                <a href=''> <i class="splashy-folder_modernist_type_movie"></i> Listar Imóveis </a>
-            </li>
-        </ul>
-    </div>
-    <div class='c2 c2-links'>
-        <ul>
-            <li>
-                <a href=''> <i class="splashy-group_blue_add"></i> Adicionar Usuário </a>
-            </li>
-        </ul>
-    </div>
-    <div class='c2 c2-links'>
-        <ul>
-            <li>
-                <a href=''> <i class="splashy-contact_blue_add"></i> Adicionar Proprietários </a>
+                <?php
+                    echo $this->Html->link(
+                        $this->Html->tag('i','&nbsp;', array('class' => 'splashy-folder_modernist_type_movie')). 'Listar Imóveis',
+                        array(
+                            'controller' =>'Imovels',
+                            'action' =>'index'
+                        ),
+                        array(
+                            'escape' => false
+                        )
+                    );
+                ?>
             </li>
         </ul>
     </div>
@@ -81,7 +53,21 @@
     <div class='c2 c2-links'>
         <ul>
             <li>
-                <a href=''> <i class="splashy-hcards_down"></i> Adicionar Bairros/Cidade </a>
+                <a href=''> <i class="splashy-contact_blue_add"></i> Relatório Similares </a>
+            </li>
+        </ul>
+    </div>
+    <div class='c2 c2-links'>
+        <ul>
+            <li>
+                <a href=''> <i class="splashy-hcards_down"></i> Relatório de Visitas </a>
+            </li>
+        </ul>
+    </div>
+    <div class='c2 c2-links'>
+        <ul>
+            <li>
+                <a href=''> <i class="splashy-group_blue_add"></i> Adicionar Usuário </a>
             </li>
         </ul>
     </div>
@@ -287,4 +273,4 @@
             </tbody>
         </table>        
     </section>
-</div>  
+</div>

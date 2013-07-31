@@ -39,10 +39,7 @@ class Imovel extends AppModel {
 		),
 		'Tipo' => array(
 			'className' => 'Tipo',
-			'foreignKey' => 'tipo_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
+			'foreignKey' => 'tipo_id'
 		),
 		'Categoria' => array(
 			'className' => 'Categoria',
@@ -79,97 +76,6 @@ class Imovel extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		),
-		'Dado' => array(
-			'className' => 'Dado',
-			'foreignKey' => 'imovel_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'Destaque' => array(
-			'className' => 'Destaque',
-			'foreignKey' => 'imovel_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'Detalhe' => array(
-			'className' => 'Detalhe',
-			'foreignKey' => 'imovel_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'Foto' => array(
-			'className' => 'Foto',
-			'foreignKey' => 'imovel_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'ImovelProprietario' => array(
-			'className' => 'ImovelProprietario',
-			'foreignKey' => 'imovel_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'Lazer' => array(
-			'className' => 'Lazer',
-			'foreignKey' => 'imovel_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'Log' => array(
-			'className' => 'Log',
-			'foreignKey' => 'imovel_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
 		'Observation' => array(
 			'className' => 'Observation',
 			'foreignKey' => 'imovel_id',
@@ -182,33 +88,6 @@ class Imovel extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
-		),
-		'Placa' => array(
-			'className' => 'Placa',
-			'foreignKey' => 'imovel_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'Valore' => array(
-			'className' => 'Valore',
-			'foreignKey' => 'imovel_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
 		)
 	);
-
 }

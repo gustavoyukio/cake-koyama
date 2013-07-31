@@ -110,8 +110,14 @@ class ImovelsController extends AppController {
  * @return void
  */
 	public function admin_index() {
-		$this->Imovel->recursive = 0;
-		$this->set('imovels', $this->paginate());
+		// Options
+		$this->Imovel->recursive = 1;
+
+		// Getters
+		$imovels = $this->paginate();
+
+		// Setters
+		$this->set( compact('imovels'));
 	}
 
 /**

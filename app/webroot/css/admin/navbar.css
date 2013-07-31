@@ -1,0 +1,73 @@
+/* first menu */
+.navbar ul{
+    background-image: url(../img/menuTop.png);
+    background-size: 100% 100%;
+    border-radius: 6px;
+    min-height: 40px;
+    line-height: 40px;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    margin: 0;
+    text-decoration: none;
+}
+.navbar ul li{
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+.navbar ul li p{
+    display: block;
+    padding: 0 1em;
+    margin: 0;
+    font-weight: bold;
+}
+.navbar ul li p:hover{
+    background-image: url(../img/menuTop2.png);
+    background-size: 100% 100%;
+    color: #808080;
+    border-radius: 0;
+}
+.navbar ul li > p:hover{
+    border-radius: 6px;
+    color: #808080;
+}
+.navbar ul li p a:link,.navbar ul li p a:active, .navbar ul li p a:visited{
+    color: #808080;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+}
+/* child */
+.navbar ul li > ul{
+    border-radius: 0;
+    display: none;
+    position: absolute;
+
+}
+.navbar ul li > ul li{
+    font-size: 10px;
+    padding: 1em 2em;
+}
+.navbar ul li > ul li a:link, .navbar ul li > ul li a:active, .navbar ul li > ul li a:visited{
+    color: #fff;    
+}
+
+.navbar ul li:hover > ul {
+    background-color: #f8f8f8;
+    background-image: none;
+    display: block;
+    height: 60px;
+}
+.navbar ul li:hover > ul li > ul{
+    margin-left: -2em;
+    position: absolute;
+}
+.navbar ul li:hover > ul li > ul li{
+    padding-left: 1em 2em;
+}
+.navbar ul li:hover > ul li > ul li a:link, .navbar ul li:hover > ul li > ul li a:active, .navbar ul li:hover > ul li > ul li a:visited{
+    color: #808080;
+    font-size: 14px;
+
+}
