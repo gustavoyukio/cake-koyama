@@ -1,10 +1,24 @@
 <div class="row">
 	<div class="c12">
-		a
+		<form>
+            <ul class='select-tipo'>
+                <li> 
+                    <a href=''> Ativos </a>
+                </li>
+                <li> 
+                    <a href=''> Inativos </a>
+                </li>
+                <li> 
+                    <a href=''> Todos </a>
+                </il>
+                <li> <input type='text' name='codigo' placeholder='Procurar por Código'></li>
+                <li> <input type='text' name='codigo' placeholder='Procurar por Rua' style='width: 450px;'></li>
+            </ul>
+        </form>
 	</div>
 </div>
 
-<section>
+<section class='clear'>
 	<? foreach( $imovels as $imovel): ?>
 		<section class="row fix detalhes">
 			<article class="c3 detalhes-image">

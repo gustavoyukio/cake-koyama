@@ -30,27 +30,27 @@ class Imovel extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'User' => array(
-			'className' => 'User',
-			'foreignKey' => 'user_id',
+		'Corretores' => array(
+			'className' => 'Corretores',
+			'foreignKey' => 'corretor_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Tipo' => array(
 			'className' => 'Tipo',
-			'foreignKey' => 'tipo_id'
+			'foreignKey' => 'tipos_id'
 		),
 		'Categoria' => array(
 			'className' => 'Categoria',
-			'foreignKey' => 'categoria_id',
+			'foreignKey' => 'categorias_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Contrato' => array(
 			'className' => 'Contrato',
-			'foreignKey' => 'contrato_id',
+			'foreignKey' => 'contratos_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
@@ -62,32 +62,5 @@ class Imovel extends AppModel {
  *
  * @var array
  */
-	public $hasMany = array(
-		'Comentario' => array(
-			'className' => 'Comentario',
-			'foreignKey' => 'imovel_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'Observation' => array(
-			'className' => 'Observation',
-			'foreignKey' => 'imovel_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);
+
 }

@@ -974,6 +974,28 @@ input[type='button'] {
     Main - Content
         $listar Imoveis
 =====================================================================*/
+.select-tipo {
+  background-color: #f1f1f1;
+  display: block;
+  list-style: none;
+  height: 50px;
+}
+.select-tipo li {
+  display: inline-block;
+  margin: 0 15px;
+}
+.select-tipo li a {
+  background-color: #8C8C87;
+  color: white;
+  display: block;
+  margin-top: -5px;
+  padding: 5px 15px;
+  border: 1px solid #222;
+  border-radius: 4px;
+}
+.select-tipo li input {
+  margin-top: 10px;
+}
 .detalhes {
   border-top: 1px dotted #222;
 }
@@ -993,11 +1015,11 @@ input[type='button'] {
 }
 .detalhes .detalhes-image figure figcaption {
   top: 200px;
-  background-color: #ededed;
-  padding: 1em;
+  background-color: #0E6EC1 ;
   position: absolute;
   display: block;
   width: 100%;
+  border-top: 2px solid #BA0D14;
 }
 .detalhes .detalhes-image figure:hover figcaption {
   top: 150px;
@@ -1014,7 +1036,7 @@ input[type='button'] {
   padding: 0.5em;
   border-radius: 4px;
   color: #ffffff;
-  background-color: #808080;
+  padding: 1em;
 }
 .small-info {
   padding: 0;

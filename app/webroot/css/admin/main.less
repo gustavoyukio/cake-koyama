@@ -689,6 +689,29 @@ background: #f9f9f9;
     Main - Content
         $listar Imoveis
 =====================================================================*/
+.select-tipo{
+    background-color: #f1f1f1;
+    display: block;
+    list-style: none;
+    height: 50px;
+}
+.select-tipo li{
+    display: inline-block;
+    margin: 0 15px;
+}
+.select-tipo li a{
+    background-color: #8C8C87;
+    color: white;
+    display: block;
+    margin-top: -5px;
+    padding: 5px 15px;
+    border: 1px solid #222;
+    border-radius: 4px;
+}
+.select-tipo li input{
+    margin-top: 10px;
+}
+
 .c3{
 }
 .detalhes{
@@ -710,11 +733,11 @@ background: #f9f9f9;
 }
 .detalhes .detalhes-image figure figcaption{
     top: 200px;
-    background-color: #ededed;
-    padding: 1em;
+    background-color:#0E6EC1 ;
     position: absolute;
     display: block;
     width: 100%;
+    border-top: 2px solid #BA0D14;
 }
 .detalhes .detalhes-image figure:hover figcaption{
     top: 150px;
@@ -723,7 +746,7 @@ background: #f9f9f9;
 }
 .botao:link, .botao:active, .botao:visited{
     .new-btn( .5em, 4px, #fff );
-    background-color: #808080;
+    padding: 1em;
 }
 .small-info{
     
@@ -776,44 +799,44 @@ background: #f9f9f9;
     /*===========================
         Tabs
     ===========================*/
-.tabs ul{
-    list-style: none;
-    padding: 0;
-    position: relative;
-    margin: 0 auto -1px;
-}
-.tabs ul li{
-    display: inline-block;
-    border:1px solid #fff;
-    background-color: #dcdcdc;
-}
-.tabs .active, .tabs ul li a:hover{
-    background-color: #fff;
-    border-left-color: green;
-}
-.tabs .active{
-    background-color: #fff;
-    border: 1px solid #dcdcdc;
-    border-bottom: 1px solid #fff;
-}
-.tabs ul li a:active, .tabs ul li a:link, .tabs ul li a:visited{
-    color: #222;
-    display: block;
-    height: 100%;
-    padding: 1em;
-}
-#tab2, #tab3, #tab4, #tab5{
-    display: none;
-}
-.tab{
-    border: 1px solid #dcdcdc;
-    border-radius: 4px;
-    margin: 0 auto 40px;
-    padding: 5px 20px;
-    width: 90%;
-    text-align: left;
-    max-height: 150px;
-}
-.data{
-    font-size: 10px;
-}
+        .tabs ul{
+            list-style: none;
+            padding: 0;
+            position: relative;
+            margin: 0 auto -1px;
+        }
+        .tabs ul li{
+            display: inline-block;
+            border:1px solid #fff;
+            background-color: #dcdcdc;
+        }
+        .tabs .active, .tabs ul li a:hover{
+            background-color: #fff;
+            border-left-color: green;
+        }
+        .tabs .active{
+            background-color: #fff;
+            border: 1px solid #dcdcdc;
+            border-bottom: 1px solid #fff;
+        }
+        .tabs ul li a:active, .tabs ul li a:link, .tabs ul li a:visited{
+            color: #222;
+            display: block;
+            height: 100%;
+            padding: 1em;
+        }
+        #tab2, #tab3, #tab4, #tab5{
+            display: none;
+        }
+        .tab{
+            border: 1px solid #dcdcdc;
+            border-radius: 4px;
+            margin: 0 auto 40px;
+            padding: 5px 20px;
+            width: 90%;
+            text-align: left;
+            max-height: 150px;
+        }
+        .data{
+            font-size: 10px;
+        }
