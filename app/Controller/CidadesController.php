@@ -1,9 +1,8 @@
 <?php
 /**
- * Application level Controller
+ * Static content controller.
  *
- * This file is application-wide controller file. You can put all
- * application-wide controller-related methods here.
+ * This file will render views from views/pages/
  *
  * PHP 5
  *
@@ -20,26 +19,23 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('Controller', 'Controller');
+App::uses('AppController', 'Controller');
 
 /**
- * Application Controller
+ * Static content controller
  *
- * Add your application-wide methods in the class below, your controllers
- * will inherit them.
+ * Override this controller by placing a copy in controllers directory of an application
  *
- * @package		app.Controller
- * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
+ * @package       app.Controller
+ * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
  */
-class AppController extends Controller {
+class CidadeController extends AppController {
 
-	public function beforefilter(){
+/**
+ * Controller name
+ *
+ * @var string
+ */
+	public $name = 'Cidade';
 
-		// Faremos a verificar para o admin
-		if( $this->params['prefix'] == 'admin'){
-			$this->layout = 'admin';
-			//pr( $this->params );
-		}
-
-	}
 }

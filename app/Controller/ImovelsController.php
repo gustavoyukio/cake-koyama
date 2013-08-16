@@ -14,7 +14,8 @@ class ImovelsController extends AppController {
  */
 	public function index() {
 		$this->Imovel->recursive = 0;
-		$this->set('imovels', $this->paginate());
+		$a = $this->paginate();
+		$this->set('imovels', $a);
 	}
 
 /**
@@ -111,7 +112,55 @@ class ImovelsController extends AppController {
  */
 	public function admin_index() {
 		// Options
-		$this->Imovel->recursive = 1;
+		$this->Imovel->recursive = 2;
+
+		if( !empty($this->params['url']['filtro']) ){
+			
+            $filtros = $this->params['url']['filtro'];
+
+            if( !empty($filtros) ){
+				
+                $this->paginate = array(
+					'conditions' => array(
+						'status' => $filtros
+					),
+                    'order' => array(
+                        'codigo' => 'ASC'
+                    )
+				);
+
+			}
+
+        }elseif(!empty($this->params['url']['codigo'])){
+
+            $filtros = $this->params['url']['codigo'];
+
+            if( !empty($filtros) ){
+                
+                $this->paginate = array(
+                    'conditions' => array(
+                        'codigo' => $filtros
+                    )
+                );
+
+            }
+
+         }elseif(!empty($this->params['url']['street'])){
+
+            $filtros = $this->params['url']['street'];
+         
+		}else{
+
+            $this->paginate = array(
+                'conditions' => array(
+                ),
+                'order' => array(
+                    'codigo' => 'ASC'
+                ),
+                'limit' => 10
+            );
+
+        }
 
 		// Getters
 		$imovels = $this->paginate();

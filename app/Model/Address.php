@@ -19,7 +19,7 @@ App::uses('AppModel', 'Model');
  * @property Placa $Placa
  * @property Valore $Valore
  */
-class Imovel extends AppModel {
+class Address extends AppModel {
 
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -30,31 +30,34 @@ class Imovel extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Corretores' => array(
-			'className' => 'Corretores',
-			'foreignKey' => 'corretor_id',
+		'Imovel' => array(
+			'className' => 'Imovel',
+			'foreignKey' => 'imovel_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
-		'Tipo' => array(
-			'className' => 'Tipo',
-			'foreignKey' => 'tipos_id'
+		'Bairro' => array(
+			'className' => 'Bairro',
+			'foreignKey' => 'bairros_id',
+			'conditions' => 'Bairro.status = 1',
+			'fields' => '',
+			'order' => ''			
 		),
-		'Categoria' => array(
-			'className' => 'Categoria',
-			'foreignKey' => 'categorias_id',
+		'Estado' => array(
+			'className' => 'Estado',
+			'foreignKey' => 'estados_id',
 			'conditions' => '',
 			'fields' => '',
-			'order' => ''
+			'order' => ''			
 		),
-		'Contrato' => array(
-			'className' => 'Contrato',
-			'foreignKey' => 'contratos_id',
+		'Cidade' => array(
+			'className' => 'Cidade',
+			'foreignKey' => 'cidades_id',
 			'conditions' => '',
 			'fields' => '',
-			'order' => ''
-		)
+			'order' => ''			
+		)	
 	);
 
 /**
@@ -62,34 +65,13 @@ class Imovel extends AppModel {
  *
  * @var array
  */
-	public $hasMany = array(
-		'Observacao' => array(
-			'className' => 'Observacao',
-			'foreignKey' => 'imovel_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''			
-		)
-	);
+
 /**
  * hasOne associations
  *
  * @var array
  */
 	public $hasOne = array(
-		'Address' => array(
-			'className' => 'Address',
-			'foreignKey' => 'imovel_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''			
-		),
-		'Valore' => array(
-			'className' => 'Valore',
-			'foreignKey' => 'imovel_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''				
-		)
+
 	);
 }

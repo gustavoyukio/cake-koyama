@@ -14,7 +14,7 @@
 
 		// Estilo
 		echo $this->Html->css(array(
-			'admin/main','admin/navbar', 'admin/table', 'admin/splashy'
+			'admin/main','admin/menu', 'admin/table', 'admin/splashy'
 		));
 
 	?>
@@ -32,23 +32,18 @@
 			
 			<!-- Logo Content -->
 			<div id="logoContent">
-				<a href='index.php' style='display:block; height:60px; width:300px;'> &nbsp; </a>
+				<a href='/admin' style='display:block; height:60px; width:300px;'> &nbsp; </a>
 			</div>
 			<!-- Fim do Logo Content -->
 
 			<!-- User Details -->
 			<div id="user">
+
 				<div style='float:left; width:300px; display:block; color:#f8ffff;'>
-					Seja Bem Vindo, <span style='color:#ee82ee;'> nome </span><br/>
-					<span style='color:yellow;'>
-						0 Chamadas Nao Lidas
-                    </span> Novas Mensagens  
-                    <br/>
+					Seja Bem Vindo, <span style='color:#ee82ee;'> nome </span>
 					<a href='logout.php'> [ Deslogar-se ] </a>
 						
 				</div>
-				<img src='imagens/person.png' style='float:right; display:block; margin-left:10px;' />
-				<br class='clear' />
 					
 			</div>
 			<!-- Fim do User Details -->
@@ -60,8 +55,96 @@
 	<!-- Fim do Header -->
 	
 	<!-- Navbar -->
-	<nav role='navigation' class='navbar clear c12'>
-        a
+	<nav role='navigation' class='navbar clear c12' id='cssmenu'>
+		<ul>
+		   <li class='active'><a href='index.html'><span>Home</span></a></li>
+		   <li class='has-sub'><a href='#'><span>Imóveis</span></a>
+		      <ul>
+		         <li class='has-sub'><a href='#'><span>Inserir</span></a>
+		            <ul>
+		               <li class='last'><a href='add'><span>Novo Imóvel</span></a></li>
+		            </ul>
+		         </li>
+		         <li class='has-sub'><a href='#'><span>Listar</span></a>
+		            <ul>
+		               <li class='last'><a href='#'><span>Listar Imóveis</span></a></li>
+		            </ul>
+		         </li>
+		         <li class='has-sub'><a href='#'><span>Opções</span></a>
+		            <ul>
+		               <li class='last'><a href='#'><span>Destacar</span></a></li>
+		            </ul>
+		         </li>
+		      </ul>
+		   </li>
+		   <li class='has-sub'><a href='#'><span>Relatórios</span></a>
+		      <ul>
+		         <li class='has-sub'><a href='#'><span>Imóveis</span></a>
+		            <ul>
+		               <li><a href='#'><span>Placas</span></a></li>
+		               <li><a href='#'><span>Ativos</span></a></li>
+		               <li><a href='#'><span>Captação</span></a></li>
+		               <li><a href='#'><span>Visitas</span></a></li>
+		               <li><a href='#'><span>Inativos</span></a></li>
+		               <li class='last'><a href='#'><span>Similares</span></a></li>
+		            </ul>
+		         </li>
+		         <li class='has-sub'><a href='#'><span>Interno</span></a>
+		            <ul>
+		               <li class='last'><a href='#'><span>Chamados</span></a></li>
+		            </ul>
+		         </li>
+		      </ul>
+		   </li>
+		   <li class='has-sub'><a href='#'><span>Adicionais</span></a>
+		      <ul>
+		         <li class='has-sub'><a href='#'><span>Adicionar</span></a>
+		            <ul>
+		               <li><a href='#'><span>Bairro</span></a></li>
+		               <li class='last'><a href='#'><span>Cidade</span></a></li>
+		            </ul>
+		         </li>
+		         <li class='has-sub'><a href='#'><span>Jornal e Outros</span></a>
+		            <ul>
+		               <li><a href='#'><span>Classificados</span></a></li>
+		               <li class='last'><a href='#'><span>Visitas de Clientes</span></a></li>
+		            </ul>
+		         </li>
+		      </ul>
+		   </li>
+		   <li class='has-sub'><a href='#'><span>Chamados</span></a>
+		      <ul>
+		         <li><a href='#'><span>Abrir Novo</span></a></li>
+		         <li><a href='#'><span>Listar</span></a></li>
+		         <li class='has-sub'><a href='#'><span>Administrativo</span></a>
+		            <ul>
+		               <li class='last'><a href='#'><span>Listar Todos</span></a></li>
+		            </ul>
+		         </li>
+		      </ul>
+		   </li>
+		   <li class='has-sub'><a href='#'><span>Usuários</span></a>
+		      <ul>
+		         <li class='has-sub'><a href='#'><span>Interno</span></a>
+		            <ul>
+		               <li class='last'><a href='#'><span>Corretores</span></a></li>
+		            </ul>
+		         </li>
+		         <li class='has-sub'><a href='#'><span>Imóveis</span></a>
+		            <ul>
+		               <li><a href='#'><span>Clientes</span></a></li>
+		               <li class='last'><a href='#'><span>Proprietários</span></a></li>
+		            </ul>
+		         </li>
+		      </ul>
+		   </li>
+		   <li class='has-sub last'><a href='#'><span>Notícias</span></a>
+		      <ul>
+		         <li><a href='#'><span>Adicionar</span></a></li>
+		         <li class='last'><a href='#'><span>Editar</span></a></li>
+		      </ul>
+		   </li>
+		</ul>
 	</nav>
 	<!-- Fim do Navbar -->
 
