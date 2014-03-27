@@ -27,10 +27,20 @@
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
 	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
-/**
- * ...and connect the rest of 'Pages' controller's urls.
- */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+	
+	// Contato Controller
+	Router::connect('/trabalhe-conosco', array('controller' => 'Contacts', 'action' => 'work'));
+	Router::connect('/trabalhe', 		 array('controller' => 'Contacts', 'action' => 'work'));
+	Router::connect('/work',	 		 array('controller' => 'Contacts', 'action' => 'work'));
+	Router::connect('/Contatos/work',    array('controller' => 'Contacts', 'action' => 'work'));
+	Router::connect('/contato', 		 array('controller' => 'Contacts', 'action' => 'contact'));
+	Router::connect('/Contatos/contact', array('controller' => 'Contacts', 'action' => 'contact'));	
+	Router::connect('/equipe', 			 array('controller' => 'Contacts', 'action' => 'team'));
+	Router::connect('/Contatos/team', 	 array('controller' => 'Contacts', 'action' => 'team'));
+
+	// Controller
+	Router::connect('/procura', 	 array('controller' => 'Imovels', 'action' => 'search'));
 
 /*     --------------- ADMIN ------------------ */
 	Router::connect('/admin', array('controller' => 'home', 'action' => 'index', 'admin' => true));

@@ -7,6 +7,15 @@ App::uses('AppController', 'Controller');
  */
 class ImovelsController extends AppController {
 
+	/**
+	 * procura method
+	 * @created by <gustavo.cruz>
+	 * @return void
+	 */
+	public function search() {
+		$gets = $this->request->query;
+	}
+
 /**
  * index method
  *
